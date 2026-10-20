@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Slides Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Slides Application</h1>
+<div class="topButtons" style="padding: 10px;">
+    <button onclick="saveSlides()">Save Slides</button>
+    <button onclick="presentSlides()">Present</button>
+</div>
+
+    <div class="main">
+
+        <!-- Markdown Editor -->
+        <div class="editor">
+            <h2>Write Your Slides</h2>
+
+            <textarea id="markdown"># My First Slide
+
+## Welcome
+
+This is my first slide.
+
+---
+
+# My Second Slide
+
+## About My Project
+
+This is my second slide.
+</textarea>
+        </div>
+
+        <!-- Slide Preview -->
+        <div class="preview">
+            <h2>Slide Preview</h2>
+
+            <div id="slide">
+                <h1>My First Slide</h1>
+                <h2>Welcome</h2>
+                <p>This is my first slide.</p>
+            </div>
+
+            <div class="buttons">
+                <button id="leftBtn" disabled>Left</button>
+
+                <span id="slideCount">1 / 2</span>
+
+                <button id="rightBtn">Right</button>
+
+                <button id="fullBtn">Full Screen</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

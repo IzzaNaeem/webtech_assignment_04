@@ -1,0 +1,132 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f6;
+    margin: 0;
+    color: #222;
+}
+
+h1 {
+    color: #26364a;
+}
+
+body > h1 {
+    background-color: #26364a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.editor, .preview {
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+textarea {
+    width: 95%;
+    height: 350px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#slide {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 25px;
+    min-height: 300px;
+    border-radius: 5px;
+}
+
+#slide h1 {
+    color: #26364a;
+}
+
+#slide h2 {
+    color: #315f9e;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #315f9e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #234674;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+#slideCount {
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .editor, .preview {
+        width: auto;
+    }
+}
+/* Presentation Mode */
+
+body.presenting > h1,
+body.presenting > .topButtons {
+    display: none;
+}
+
+body.presenting .main {
+    padding: 0;
+    min-height: 100vh;
+}
+
+body.presenting .editor {
+    display: none;
+}
+
+body.presenting .preview {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body.presenting #slide {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+body.presenting #slide h1 {
+    font-size: 45px;
+}
+
+body.presenting #slide p {
+    font-size: 24px;
+}
